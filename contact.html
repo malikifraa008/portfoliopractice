@@ -5,212 +5,211 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact</title>
     <style>
-body{
+        * { box-sizing: border-box; }
+
+        body {
             background-color: papayawhip;
             font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 10px;
         }
-         .menu1{
+
+        img { max-width: 100%; }
+
+        /* ---------- Menu ---------- */
+        .menu1 {
             background-color: rgb(22, 103, 61);
-            padding:10px;
+            padding: 10px;
             text-align: center;
             border-radius: 390px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 25px;
         }
-        
-          .menu1 span {
-                text-align: center;
-                margin-left: 25px;
-            }
-        .menu1 span a{
-                color: aquamarine;
-                text-decoration: none;
-            }
 
-    
-        .container{
+        .menu1 span { margin: 0; }
+
+        .menu1 span a {
+            color: aquamarine;
+            text-decoration: none;
+        }
+
+        /* ---------- Container ---------- */
+        .container {
             background-color: rgb(208, 243, 167);
-             padding:10px 60px 10px;
-             margin: 0;
-             width:60%;
-              margin: 20px auto;
-    padding: 30px;}
+            width: 65%;
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 30px;
+        }
 
-    h2{
-        text-align: center;
-        color: rgb(1, 63, 42);
-    }
+        h2 { text-align: center; color: rgb(1, 63, 42); }
 
-    .contact{
-        color: rgb(1, 46, 46);
-        text-align: left;
-         color: firebrick;
+        .contact {
+            text-align: left;
+            color: firebrick;
             border-bottom: 2px solid brown;
             padding: 20px;
-    }
-    .message{
-        color: firebrick;
+        }
+
+        .message {
+            color: firebrick;
             border-bottom: 2px solid brown;
             padding: 10px;
-            font-weight:bold;
+            font-weight: bold;
             text-align: left;
-    }
+        }
 
-    .links{
-    margin-top:20px;
-    margin-bottom:20px;
-}
+        .links { margin-top: 20px; margin-bottom: 20px; }
 
-.links a{
-    text-decoration:none;
-    background-color:rgb(22,103,61);
-    color:white;
-    padding:10px 15px;
-    border-radius:8px;
-    border:2px solid rgb(8,78,44);
-    margin-right:10px;
-}
+        .links a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: rgb(22, 103, 61);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 2px solid rgb(8, 78, 44);
+            margin: 0 10px 10px 0;
+        }
 
-fieldset{
-    border:3px solid rgb(22,103,61);
-    border-radius:10px;
-    padding:20px;
-    background-color:rgb(244,250,236);
-}
+        fieldset {
+            min-width: 0;
+            border: 3px solid rgb(22, 103, 61);
+            border-radius: 10px;
+            padding: 20px;
+            background-color: rgb(244, 250, 236);
+        }
 
-legend{
-    color:firebrick;
-    font-size:20px;
-}
+        legend { color: firebrick; font-size: 20px; }
 
-input,select,textarea{
-    padding:8px;
-    border:1px solid gray;
-    border-radius:5px;
-}
+        input, select, textarea {
+            padding: 8px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            font-family: inherit;
+        }
 
-.btn1{
-    background-color:firebrick;
-    color:white;
-    padding:10px 18px;
-    border:none;
-    border-radius:5px;
-}
+        input[type=text], input[type=email], input[type=tel],
+        input[type=date], select, textarea {
+            width: 100%;
+            max-width: 480px;
+        }
 
-.btn2{
-    background-color:firebrick;
-    color:white;
-    padding:10px 18px;
-    border:none;
-    border-radius:5px;
-}
-.end{
-    text-align: center;
-}
+        .btn1, .btn2 {
+            background-color: firebrick;
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 5px;
+            margin: 0 8px 8px 0;
+            cursor: pointer;
+        }
 
+        .end { text-align: center; }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 900px) {
+            .container { width: 92%; }
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 6px; }
+            .container { width: 100%; padding: 15px; margin: 10px auto; }
+            .menu1 { border-radius: 30px; gap: 6px 18px; }
+            h1 { font-size: 28px; }
+            h2 { font-size: 22px; }
+            h3 { font-size: 18px; }
+
+            .contact, .message { padding: 12px; }
+            fieldset { padding: 12px; }
+        }
     </style>
 </head>
 <body>
-    <div class="container"id="top">
+    <div class="container" id="top">
 
-    <div class="menu1">
-     <span> <a href="index.html">Home</a> </span> 
-     <span>  <a href="about.html">About Me</a></span> 
-       <span> <a href="contact.html">Contact</a></span>
+        <div class="menu1">
+            <span><a href="index.html">Home</a></span>
+            <span><a href="about.html">About Me</a></span>
+            <span><a href="contact.html">Contact</a></span>
+        </div>
+
+        <div>
+            <h2>GET IN TOUCH</h2>
+
+            <div class="links">
+                <h2 class="contact">Get Direct Contact</h2>
+                <a href="mailto:malikifraa8@gmail.com">Email Me</a>
+                <a href="tel:9137580299">Call Me</a>
+            </div>
+            <h2 class="message">Or Send a Message</h2>
+
+            <form>
+
+                <fieldset>
+                    <legend><b>Your Details</b></legend>
+
+                    <label>Full Name:</label><br>
+                    <input type="text" placeholder="Enter your name"><br><br>
+
+                    <label>Email:</label><br>
+                    <input type="email" placeholder="Enter your email"><br><br>
+
+                    <label>Phone Number:</label><br>
+                    <input type="tel" placeholder="Enter your number"><br><br>
+
+                    <label>Date Of Birth:</label><br>
+                    <input type="date" id="dob" name="dob" required><br><br>
+
+                    <p>Gender:</p>
+
+                    <input type="radio" name="gender" id="g1"> <label for="g1">Male</label>
+                    <input type="radio" name="gender" id="g2"> <label for="g2">Female</label>
+                    <input type="radio" name="gender" id="g3"> <label for="g3">Other</label>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend><b>Message Details</b></legend>
+
+                    <p>Reason for Contact</p>
+
+                    <input type="checkbox" id="c1"> <label for="c1">Project</label><br>
+                    <input type="checkbox" id="c2"> <label for="c2">Feedback</label><br>
+                    <input type="checkbox" id="c3"> <label for="c3">General Query</label><br><br>
+
+                    <label>Subject:</label><br>
+                    <select>
+                        <option>Select Subject</option>
+                        <option>Website Project</option>
+                        <option>Internship</option>
+                        <option>Feedback</option>
+                        <option>Other</option>
+                    </select>
+
+                    <br><br>
+
+                    <label>Your Message:</label><br>
+                    <textarea rows="5" cols="45" placeholder="Write your message here..."></textarea>
+                </fieldset>
+
+                <br>
+
+                <input class="btn1" type="submit" value="Send Message">
+                <input class="btn2" type="reset" value="Clear Form">
+
+            </form>
+
+            <br>
+            <div class="end">
+                <a href="#top">back to top </a>
+                <p style="text-decoration: underline;">Thanks For Reaching Out.</p>
+            </div>
+        </div>
+
     </div>
-    <div>
-<h2>GET IN TOUCH</h2>
-
-<div class="links">
-    <h2 class="contact">Get Direct Contact</h2>
-<a href="mailto:malikifraa8@gmail.com"> Email Me</a>
-<a href="tel:9137580299"> Call Me</a>
-</div>
-<h2 class="message"> Or Send a Message</h2>
-
-<form>
-
-<fieldset>
-<legend><b>Your Details</b></legend>
-
-<label>Full Name:</label><br>
-<input type="text" placeholder="Enter your name"><br><br>
-
-<label>Email:</label><br>
-<input type="email" placeholder="Enter your email"><br><br>
-
-<label>Phone Number:</label><br>
-<input type="tel" placeholder="Enter your number"><br><br>
-
- <label> Date Of Birth:</label> <br>
-            <input type="Date" id="Date Of Birth" name="Date Of Birth"placeholder="Enter Your Date Of Birth "required /> <br> </br>
-
-<p>Gender:</p>
-
-<input type="radio" name="gender">
-<label>Male</label>
-
-<input type="radio" name="gender">
-<label>Female</label>
-
-<input type="radio" name="gender">
-<label>Other</label>
-
-</fieldset>
-
-<br>
-
-<fieldset>
-
-<legend><b>Message Details</b></legend>
-
-<p>Reason for Contact</p>
-
-<input type="checkbox">
-<label>Project</label><br>
-
-<input type="checkbox">
-<label>Feedback</label><br>
-
-<input type="checkbox">
-<label>General Query</label><br><br>
-
-<label>Subject:</label><br>
-
-<select>
-
-<option>Select Subject</option>
-
-<option>Website Project</option>
-
-<option>Internship</option>
-
-<option>Feedback</option>
-
-<option>Other</option>
-
-</select>
-
-<br><br>
-
-<label>Your Message:</label><br>
-
-<textarea rows="5" cols="45" placeholder="Write your message here..."></textarea>
-
-</fieldset>
-
-<br>
-
-<input class="btn1" type="submit" value="Send Message">
-
-<input class="btn2" type="reset" value="Clear Form">
-
-</form>
-
-<br>
-<div class="end">
-<a href="#top">back to top </a>
-
-<p style="text-decoration: underline;"> Thanks For Reaching Out. </p>
-</div>
-
 </body>
 </html>
